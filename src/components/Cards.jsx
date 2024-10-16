@@ -37,7 +37,7 @@ const Cards = () => {
               <Card.Img 
                 variant="top" 
                 src={produto.image} 
-                style={{ height: '500px', objectFit: 'contain', width: '100%' , backgroundColor: 'white'}} 
+                style={{ height: '450px', objectFit: 'contain', width: '100%' , backgroundColor: 'white'}} 
               />
               <Card.Body>
                 <Card.Title style={cardTitleStyle}>{produto.nome}</Card.Title>
