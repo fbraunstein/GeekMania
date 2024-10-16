@@ -1,4 +1,3 @@
-// src/components/Cards.jsx
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import Batman1 from '../assets/Batman1.png';
 import IronMan1 from '../assets/IronMan1.png';
@@ -30,13 +29,16 @@ const Cards = () => {
 
   return (
     <Container>
-      {/* Seção de Bonecos */}
       <h2 style={categoriaTituloStyle}>Bonecos:</h2>
       <Row>
         {agruparPorCategoria('boneco').map((produto) => (
           <Col key={produto.id} sm={12} md={4} lg={4}>
             <Card style={cardStyle}>
-              <Card.Img variant="top" src={produto.image} />
+              <Card.Img 
+                variant="top" 
+                src={produto.image} 
+                style={{ height: '500px', objectFit: 'contain', width: '100%' , backgroundColor: 'white'}} 
+              />
               <Card.Body>
                 <Card.Title style={cardTitleStyle}>{produto.nome}</Card.Title>
                 <Card.Text style={cardPriceStyle}>{produto.preco}</Card.Text>
@@ -96,3 +98,4 @@ const handleLeave = (e) => {
 };
 
 export default Cards;
+
